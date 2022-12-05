@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <details>
+        <summary>Ouestion No 1 : Write a JavaScript program to display the current day and time in the following format.</summary>
+        <p>
+            <p>  </p>
+            <p><strong>Sample Output</strong> = </p>
+               <p> Today is : Tuesday,
+                Current time is : 10 PM : 30 : 38</p>
+        
+                <p><strong>Orignal OutPut</strong></p>
+            <script>
+                dayList= [ 'sun','Mon', 'tues', 'wed','thus', 'fri', 'sat']
+                var today = new Date()
+                day =  today.getDay();
+                hours= today.getHours()
+                miniute = today.getMinutes()
+                seconds = today.getSeconds()
+                TimeSlapHour = (hours % 12) || 12;
+                timeSlap = hours <= 12 ? 'AM' : 'PM'
+                document.write(` Today is :  ${dayList[day]}, ` );
+                document.write(`Current Time is ${TimeSlapHour + ' ' + timeSlap } : ${miniute} : ${seconds}`);
+            </script>
+        </p>
+      </details>
+      <hr>
+      <details>
+        <summary>Question No 2 : Write a JavaScript program to print the contents of the current window. </summary>
+       <button onclick={window.print()}   >print</button>
+      </details>
+      <hr>
+      <details>
+        <summary>Write a JavaScript program to get the current date.</summary>
+        <p><strong>Sample Output</strong> = </p>
+        <p>mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy</p>
+        <p><strong>Orignal OutPut</strong></p>
+        <script>
+           const date = new Date();
+        //    document.write(date)
+           document.write(date.toLocaleDateString())
+           // for yyyy/mm/dd = 'fr-CA'
+
+        </script>
+      </details>
+      <hr>
+      <details>
+        <summary>Question No 4 : Write a JavaScript program to find the area of a triangle where lengths of the three of its sides </summary>
+        <label>Enter Sides of tryangle
+        <input type="number" id="side1"  placeholder="0"  ><input type="number" id="side2" placeholder="0"  ><input type="number" id="side3" placeholder="0"  >
+        </label>
+        <script>
+
+        </script>
+      </details>
+</body>
+</html>
